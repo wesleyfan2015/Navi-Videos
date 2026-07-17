@@ -1,8 +1,8 @@
 # Video verification
 
-- Total MP4 videos: **38**
+- Total MP4 videos: **39**
 - Movement Commands: **5**
-- Action Commands: **26**
+- Action Commands: **27**
 - Athletic Commands: **7**
 - Encoding: H.264 (`avc1`), 1600×1200, 30 fps, `yuv420p`, fast-start MP4
 - Full-frame decode: passed with zero FFmpeg errors

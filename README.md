@@ -2,12 +2,12 @@
 
 This repository is a coworker-facing motion reference for reproducing Navi as realistically as possible in MuJoCo.
 
-Open **[the playable video document](index.html)** to view all 38 actual MP4 videos with their corresponding Agentech SDK commands.
+Open **[the playable video document](index.html)** to view all 39 actual MP4 videos with their corresponding Agentech SDK commands.
 
 ## Contents
 
 - `videos/movements/`: 5 translational movement videos
-- `videos/actions/`: 26 Action Command videos
+- `videos/actions/`: 27 Action Command videos
 - `videos/athletics/`: 7 Athletic Command videos
 - `videos/*/SHA256SUMS.txt`: SHA-256 integrity manifests
 
