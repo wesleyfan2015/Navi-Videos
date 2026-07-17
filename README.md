@@ -2,7 +2,11 @@
 
 This repository is a coworker-facing motion reference for reproducing Navi as realistically as possible in MuJoCo.
 
-Open **[the playable video document](index.html)** to view all 39 actual MP4 videos with their corresponding Agentech SDK commands.
+## Watch the videos
+
+Open **[the public playable video library](https://wesleyfan2015.github.io/Navi-Videos/)** to watch all 39 actual MP4 videos with their corresponding Agentech SDK commands.
+
+GitHub's normal file view may say that an MP4 is too large to show. That is only a GitHub preview limitation; use the playable library above, or click **View raw** for an individual file.
 
 ## Contents
 
