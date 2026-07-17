@@ -38,11 +38,11 @@
 <body>
   <header>
     <h1>Navi Movement Videos for Realistic MuJoCo Simulation</h1>
-    <p class="lede">A motion-reference library for reproducing Navi's gait, posture, timing, balance, recovery, and expressive behavior in MuJoCo. Every item below is an actual H.264 MP4 video, cut to the commanded motion and ordered exactly as executed.</p>
-    <div class="stats"><span class="pill">39 playable videos</span><span class="pill">1600 × 1200</span><span class="pill">30 fps</span><span class="pill">H.264 / yuv420p</span><span class="pill">SHA-256 manifests included</span></div>
+    <p class="lede">A motion-reference library for reproducing Navi's gait, posture, timing, balance, recovery, and expressive behavior in MuJoCo. Every item below is an actual H.264 MP4 video, cut to the commanded motion and labeled with its exact SDK command.</p>
+    <div class="stats"><span class="pill">43 playable videos</span><span class="pill">1600 × 1200</span><span class="pill">30 fps</span><span class="pill">H.264 / yuv420p</span><span class="pill">SHA-256 manifests included</span></div>
   </header>
   <main>
-    <nav><a href="#movements">Movements (5)</a><a href="#actions">Action Commands (27)</a><a href="#athletics">Athletic Commands (7)</a></nav>
+    <nav><a href="#movements">Movements (5)</a><a href="#actions">Action Commands (31)</a><a href="#athletics">Athletic Commands (7)</a></nav>
 
     <section id="movements">
       <h2>Movement Commands</h2>
@@ -58,7 +58,7 @@
 
     <section id="actions">
       <h2>Action Commands</h2>
-      <p class="section-note">Expressive actions in the exact order recorded. The separately saved behavior recordings follow the original 15-command sequence.</p>
+      <p class="section-note">Canonical numbering is preserved across recording batches. The newest batch was physically executed as clap hand, sniff right, front stretch, Beats dance, Shoulder dance, then Lion dance; the refreshed front-stretch and Beats clips retain their existing filenames.</p>
       <div class="grid">
         <article><video controls playsinline preload="metadata" src="videos/actions/01_sway.mp4"></video><div class="body"><div class="topline"><h3>1. Sway</h3><span class="status pending">Loading</span></div><code>Agentech.sway()</code><p class="desc">Rhythmic left-right body rocking.</p><div class="file"><a href="videos/actions/01_sway.mp4">01_sway.mp4</a></div></div></article>
         <article><video controls playsinline preload="metadata" src="videos/actions/02_pee.mp4"></video><div class="body"><div class="topline"><h3>2. Pee</h3><span class="status pending">Loading</span></div><code>Agentech.pee()</code><p class="desc">Characteristic hind-leg lift and balance response.</p><div class="file"><a href="videos/actions/02_pee.mp4">02_pee.mp4</a></div></div></article>
@@ -87,6 +87,10 @@
         <article><video controls playsinline preload="metadata" src="videos/actions/25_think.mp4"></video><div class="body"><div class="topline"><h3>25. Think</h3><span class="status pending">Loading</span></div><code>Agentech.think()</code><p class="desc">Bends the front legs first, pauses in the lowered pose, then bends the rear legs before returning to standing.</p><div class="file"><a href="videos/actions/25_think.mp4">25_think.mp4</a></div></div></article>
         <article><video controls playsinline preload="metadata" src="videos/actions/26_observe.mp4"></video><div class="body"><div class="topline"><h3>26. Observe</h3><span class="status pending">Loading</span></div><code>Agentech.observe()</code><p class="desc">Begins an observation sweep by twisting left. In this recording the carpet causes a slip before the expected rightward completion, so the incomplete recovery is preserved as observed.</p><div class="file"><a href="videos/actions/26_observe.mp4">26_observe.mp4</a></div></div></article>
         <article><video controls playsinline preload="metadata" src="videos/actions/27_yawn.mp4"></video><div class="body"><div class="topline"><h3>27. Yawn</h3><span class="status pending">Loading</span></div><code>Agentech.yawn()</code><p class="desc">Gently extends the whole body, subtly lengthening the stance and torso, then relaxes to standing; the range is smaller than full_body_stretch().</p><div class="file"><a href="videos/actions/27_yawn.mp4">27_yawn.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/28_clap_hand.mp4"></video><div class="body"><div class="topline"><h3>28. Clap Hand</h3><span class="status pending">Loading</span></div><code>Agentech.clap_hand()</code><p class="desc">Raises one front leg, reaches it forward in a brief presenting motion, then returns cleanly to standing.</p><div class="file"><a href="videos/actions/28_clap_hand.mp4">28_clap_hand.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/29_sniff_right.mp4"></video><div class="body"><div class="topline"><h3>29. Sniff Right</h3><span class="status pending">Loading</span></div><code>Agentech.sniff_right()</code><p class="desc">Makes a compact rightward sniffing dip, then immediately recovers to the neutral stance.</p><div class="file"><a href="videos/actions/29_sniff_right.mp4">29_sniff_right.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/30_dance_shoulder.mp4"></video><div class="body"><div class="topline"><h3>30. Dance — Shoulder</h3><span class="status pending">Loading</span></div><code>Agentech.dance(style="shoulder")</code><p class="desc">Shoulder-led rocking and weight shifts with coordinated leg flexion.</p><div class="file"><a href="videos/actions/30_dance_shoulder.mp4">30_dance_shoulder.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/31_dance_lion.mp4"></video><div class="body"><div class="topline"><h3>31. Dance — Lion</h3><span class="status pending">Loading</span></div><code>Agentech.dance(style="lion")</code><p class="desc">The longer Lion dance variant, with dynamic body-height, lateral, and leg-position changes through its full sequence.</p><div class="file"><a href="videos/actions/31_dance_lion.mp4">31_dance_lion.mp4</a></div></div></article>
       </div>
     </section>
 
