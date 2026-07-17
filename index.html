@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navi Movement Videos for Realistic MuJoCo Simulation</title>
+  <style>
+    :root { color-scheme: dark; --bg:#08111f; --panel:#101d2f; --line:#263750; --text:#eef5ff; --muted:#a9b8cc; --cyan:#54d6ff; --green:#65e6a3; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(145deg,#07101d,#0d1a2d 55%,#08111f); color:var(--text); font:15px/1.55 Inter,Segoe UI,Arial,sans-serif; }
+    header { padding:56px max(24px,calc((100vw - 1240px)/2)); border-bottom:1px solid var(--line); background:radial-gradient(circle at 80% 0,#163b59 0,transparent 38%); }
+    h1 { margin:0 0 12px; font-size:clamp(32px,5vw,60px); line-height:1.04; letter-spacing:-.035em; }
+    .lede { max-width:850px; color:var(--muted); font-size:18px; }
+    .stats { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .pill { border:1px solid var(--line); border-radius:999px; padding:7px 12px; background:#0b1727cc; color:#dceaff; }
+    main { max-width:1240px; margin:auto; padding:30px 24px 72px; }
+    nav { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:34px; position:sticky; top:0; z-index:5; padding:12px 0; background:#08111fe8; backdrop-filter:blur(12px); }
+    nav a { color:var(--cyan); text-decoration:none; border:1px solid var(--line); background:#0e1a2b; border-radius:10px; padding:8px 12px; }
+    section { scroll-margin-top:76px; margin:42px 0 58px; }
+    h2 { margin:0 0 6px; font-size:30px; }
+    .section-note { color:var(--muted); margin:0 0 20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:18px; }
+    article { overflow:hidden; border:1px solid var(--line); border-radius:16px; background:linear-gradient(160deg,#132238,#0d1828); box-shadow:0 14px 32px #0004; }
+    video { display:block; width:100%; aspect-ratio:4/3; object-fit:contain; background:#000; }
+    .body { padding:16px; }
+    .topline { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    h3 { margin:0; font-size:19px; }
+    .status { flex:none; color:#07150e; background:var(--green); border-radius:999px; padding:3px 8px; font-size:12px; font-weight:700; }
+    .status.pending { color:#bfc9d8; background:#263750; }
+    code { display:block; overflow-wrap:anywhere; margin:10px 0 7px; color:#b8eaff; background:#07111e; border:1px solid #1d3048; border-radius:8px; padding:8px 10px; }
+    .desc { color:var(--muted); margin:0 0 10px; }
+    .file { color:#8fa4be; font-size:12px; }
+    .file a { color:var(--cyan); }
+    footer { border-top:1px solid var(--line); color:var(--muted); padding:26px 24px 54px; text-align:center; }
+    @media (max-width:520px) { .grid { grid-template-columns:1fr; } header { padding-top:34px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Navi Movement Videos for Realistic MuJoCo Simulation</h1>
+    <p class="lede">A motion-reference library for reproducing Navi's gait, posture, timing, balance, recovery, and expressive behavior in MuJoCo. Every item below is an actual H.264 MP4 video, cut to the commanded motion and ordered exactly as executed.</p>
+    <div class="stats"><span class="pill">38 playable videos</span><span class="pill">1600 × 1200</span><span class="pill">30 fps</span><span class="pill">H.264 / yuv420p</span><span class="pill">SHA-256 manifests included</span></div>
+  </header>
+  <main>
+    <nav><a href="#movements">Movements (5)</a><a href="#actions">Action Commands (26)</a><a href="#athletics">Athletic Commands (7)</a></nav>
+
+    <section id="movements">
+      <h2>Movement Commands</h2>
+      <p class="section-note">Translational gait references. The two lateral directions and two diagonal vectors are kept separate for simulator calibration.</p>
+      <div class="grid">
+        <article><video controls playsinline preload="metadata" src="videos/movements/01_backward.mp4"></video><div class="body"><div class="topline"><h3>1. Backward</h3><span class="status pending">Loading</span></div><code>Agentech.backward()</code><p class="desc">Straight reverse gait, default 0.5 m/s for 1 second.</p><div class="file"><a href="videos/movements/01_backward.mp4">01_backward.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/movements/02_lateral_left.mp4"></video><div class="body"><div class="topline"><h3>2. Lateral Left</h3><span class="status pending">Loading</span></div><code>Agentech.lateral_left()</code><p class="desc">Direct leftward translation while maintaining body heading.</p><div class="file"><a href="videos/movements/02_lateral_left.mp4">02_lateral_left.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/movements/03_lateral_right.mp4"></video><div class="body"><div class="topline"><h3>3. Lateral Right</h3><span class="status pending">Loading</span></div><code>Agentech.lateral_right()</code><p class="desc">Direct rightward translation while maintaining body heading.</p><div class="file"><a href="videos/movements/03_lateral_right.mp4">03_lateral_right.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/movements/04_diagonal_left_backward.mp4"></video><div class="body"><div class="topline"><h3>4. Diagonal Left Backward</h3><span class="status pending">Loading</span></div><code>Agentech.diagonal(angle_deg=-135, speed_mps=0.5, duration_s=2.0)</code><p class="desc">Backward-left diagonal translation.</p><div class="file"><a href="videos/movements/04_diagonal_left_backward.mp4">04_diagonal_left_backward.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/movements/05_diagonal_right_forward.mp4"></video><div class="body"><div class="topline"><h3>5. Diagonal Right Forward</h3><span class="status pending">Loading</span></div><code>Agentech.diagonal(angle_deg=45, speed_mps=0.5, duration_s=2.0)</code><p class="desc">Forward-right diagonal translation.</p><div class="file"><a href="videos/movements/05_diagonal_right_forward.mp4">05_diagonal_right_forward.mp4</a></div></div></article>
+      </div>
+    </section>
+
+    <section id="actions">
+      <h2>Action Commands</h2>
+      <p class="section-note">Expressive actions in the exact order recorded. The separately saved behavior recordings follow the original 15-command sequence.</p>
+      <div class="grid">
+        <article><video controls playsinline preload="metadata" src="videos/actions/01_sway.mp4"></video><div class="body"><div class="topline"><h3>1. Sway</h3><span class="status pending">Loading</span></div><code>Agentech.sway()</code><p class="desc">Rhythmic left-right body rocking.</p><div class="file"><a href="videos/actions/01_sway.mp4">01_sway.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/02_pee.mp4"></video><div class="body"><div class="topline"><h3>2. Pee</h3><span class="status pending">Loading</span></div><code>Agentech.pee()</code><p class="desc">Characteristic hind-leg lift and balance response.</p><div class="file"><a href="videos/actions/02_pee.mp4">02_pee.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/03_shake_hand.mp4"></video><div class="body"><div class="topline"><h3>3. Shake Hand</h3><span class="status pending">Loading</span></div><code>Agentech.shake_hand()</code><p class="desc">Front-paw presentation for a handshake.</p><div class="file"><a href="videos/actions/03_shake_hand.mp4">03_shake_hand.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/04_knock.mp4"></video><div class="body"><div class="topline"><h3>4. Knock</h3><span class="status pending">Loading</span></div><code>Agentech.knock()</code><p class="desc">Repeated forward paw tapping motion.</p><div class="file"><a href="videos/actions/04_knock.mp4">04_knock.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/05_hip_shake.mp4"></video><div class="body"><div class="topline"><h3>5. Hip Shake</h3><span class="status pending">Loading</span></div><code>Agentech.hip_shake()</code><p class="desc">Rear-body oscillation with a stable forebody.</p><div class="file"><a href="videos/actions/05_hip_shake.mp4">05_hip_shake.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/06_wave_hand.mp4"></video><div class="body"><div class="topline"><h3>6. Wave Hand</h3><span class="status pending">Loading</span></div><code>Agentech.wave_hand()</code><p class="desc">Raised front-paw wave with three-leg balance.</p><div class="file"><a href="videos/actions/06_wave_hand.mp4">06_wave_hand.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/07_bow.mp4"></video><div class="body"><div class="topline"><h3>7. Bow</h3><span class="status pending">Loading</span></div><code>Agentech.bow()</code><p class="desc">Forequarters lower while the rear remains elevated.</p><div class="file"><a href="videos/actions/07_bow.mp4">07_bow.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/08_wag_rear.mp4"></video><div class="body"><div class="topline"><h3>8. Wag Rear</h3><span class="status pending">Loading</span></div><code>Agentech.wag_rear()</code><p class="desc">Playful rear-body wagging motion.</p><div class="file"><a href="videos/actions/08_wag_rear.mp4">08_wag_rear.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/09_bark.mp4"></video><div class="body"><div class="topline"><h3>9. Bark</h3><span class="status pending">Loading</span></div><code>Agentech.bark()</code><p class="desc">Bark gesture with synchronized body response.</p><div class="file"><a href="videos/actions/09_bark.mp4">09_bark.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/10_nod_head.mp4"></video><div class="body"><div class="topline"><h3>10. Nod Head</h3><span class="status pending">Loading</span></div><code>Agentech.nod_head()</code><p class="desc">Repeated pitch-axis head nod.</p><div class="file"><a href="videos/actions/10_nod_head.mp4">10_nod_head.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/11_shake_head.mp4"></video><div class="body"><div class="topline"><h3>11. Shake Head</h3><span class="status pending">Loading</span></div><code>Agentech.shake_head()</code><p class="desc">Repeated yaw-axis head shake.</p><div class="file"><a href="videos/actions/11_shake_head.mp4">11_shake_head.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/12_confused.mp4"></video><div class="body"><div class="topline"><h3>12. Confused</h3><span class="status pending">Loading</span></div><code>Agentech.confused()</code><p class="desc">Asymmetric, questioning head-and-body gesture.</p><div class="file"><a href="videos/actions/12_confused.mp4">12_confused.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/13_show_affection.mp4"></video><div class="body"><div class="topline"><h3>13. Show Affection</h3><span class="status pending">Loading</span></div><code>Agentech.show_affection()</code><p class="desc">Expressive affectionate body motion.</p><div class="file"><a href="videos/actions/13_show_affection.mp4">13_show_affection.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/14_draw_heart.mp4"></video><div class="body"><div class="topline"><h3>14. Draw Heart</h3><span class="status pending">Loading</span></div><code>Agentech.draw_heart()</code><p class="desc">Coordinated gesture tracing a heart-like path.</p><div class="file"><a href="videos/actions/14_draw_heart.mp4">14_draw_heart.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/15_dance_beats.mp4"></video><div class="body"><div class="topline"><h3>15. Dance — Beats</h3><span class="status pending">Loading</span></div><code>Agentech.dance(style="beats")</code><p class="desc">The recorded Beats dance variant.</p><div class="file"><a href="videos/actions/15_dance_beats.mp4">15_dance_beats.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/16_cute.mp4"></video><div class="body"><div class="topline"><h3>16. Cute</h3><span class="status pending">Loading</span></div><code>Agentech.cute()</code><p class="desc">Brief playful left-to-right body shimmy, then return to standing.</p><div class="file"><a href="videos/actions/16_cute.mp4">16_cute.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/17_ask_for_play.mp4"></video><div class="body"><div class="topline"><h3>17. Ask for Play</h3><span class="status pending">Loading</span></div><code>Agentech.ask_for_play()</code><p class="desc">Lowers the forequarters into a playful bow, then rocks side to side.</p><div class="file"><a href="videos/actions/17_ask_for_play.mp4">17_ask_for_play.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/18_enjoy_being_touched.mp4"></video><div class="body"><div class="topline"><h3>18. Enjoy Being Touched</h3><span class="status pending">Loading</span></div><code>Agentech.enjoy_touch()</code><p class="desc">Full recorded response to the Enjoy Being Touched action.</p><div class="file"><a href="videos/actions/18_enjoy_being_touched.mp4">18_enjoy_being_touched.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/19_sniff_left.mp4"></video><div class="body"><div class="topline"><h3>19. Sniff Left</h3><span class="status pending">Loading</span></div><code>Agentech.sniff_left()</code><p class="desc">Lowers the forequarters and left-front leg into a brief leftward sniffing pose, then recovers.</p><div class="file"><a href="videos/actions/19_sniff_left.mp4">19_sniff_left.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/20_sniff_ahead.mp4"></video><div class="body"><div class="topline"><h3>20. Sniff Ahead</h3><span class="status pending">Loading</span></div><code>Agentech.sniff_ahead()</code><p class="desc">Flexes both front legs, lowers the forequarters toward the floor, pauses in a forward sniff, then rises.</p><div class="file"><a href="videos/actions/20_sniff_ahead.mp4">20_sniff_ahead.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/21_front_stretch.mp4"></video><div class="body"><div class="topline"><h3>21. Front Stretch</h3><span class="status pending">Loading</span></div><code>Agentech.front_stretch()</code><p class="desc">Keeps the hindquarters raised, extends both front legs forward, and lowers the chest in a classic forward stretch.</p><div class="file"><a href="videos/actions/21_front_stretch.mp4">21_front_stretch.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/22_full_body_stretch.mp4"></video><div class="body"><div class="topline"><h3>22. Full Body Stretch</h3><span class="status pending">Loading</span></div><code>Agentech.full_body_stretch()</code><p class="desc">Lowers the body into a deep whole-body extension, holds the stretched pose, then returns to standing.</p><div class="file"><a href="videos/actions/22_full_body_stretch.mp4">22_full_body_stretch.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/23_push_up.mp4"></video><div class="body"><div class="topline"><h3>23. Push Up</h3><span class="status pending">Loading</span></div><code>Agentech.push_up()</code><p class="desc">Drops into the push-up posture, cycles through the commanded vertical motion, then recovers.</p><div class="file"><a href="videos/actions/23_push_up.mp4">23_push_up.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/24_look_around.mp4"></video><div class="body"><div class="topline"><h3>24. Look Around</h3><span class="status pending">Loading</span></div><code>Agentech.look_around()</code><p class="desc">Performs the recorded scanning motion through successive look directions, then returns to neutral.</p><div class="file"><a href="videos/actions/24_look_around.mp4">24_look_around.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/25_think.mp4"></video><div class="body"><div class="topline"><h3>25. Think</h3><span class="status pending">Loading</span></div><code>Agentech.think()</code><p class="desc">Transitions into the recorded contemplative head-and-body pose, holds briefly, then returns to neutral.</p><div class="file"><a href="videos/actions/25_think.mp4">25_think.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/actions/26_observe.mp4"></video><div class="body"><div class="topline"><h3>26. Observe</h3><span class="status pending">Loading</span></div><code>Agentech.observe()</code><p class="desc">Lowers into the recorded attentive observation pose, scans while held low, then rises to neutral.</p><div class="file"><a href="videos/actions/26_observe.mp4">26_observe.mp4</a></div></div></article>
+      </div>
+    </section>
+
+    <section id="athletics">
+      <h2>Athletic Commands</h2>
+      <p class="section-note">High-dynamic motions in exact execution order. The brief backward reposition between Jump Round and Jump Forward is intentionally excluded because it is not an Athletic Command.</p>
+      <div class="grid">
+        <article><video controls playsinline preload="metadata" src="videos/athletics/01_jump.mp4"></video><div class="body"><div class="topline"><h3>1. Jump</h3><span class="status pending">Loading</span></div><code>Agentech.jump()</code><p class="desc">Vertical jump and controlled landing recovery.</p><div class="file"><a href="videos/athletics/01_jump.mp4">01_jump.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/athletics/02_jump_round.mp4"></video><div class="body"><div class="topline"><h3>2. Jump Round</h3><span class="status pending">Loading</span></div><code>Agentech.jump_round()</code><p class="desc">Rotational jump with landing recovery.</p><div class="file"><a href="videos/athletics/02_jump_round.mp4">02_jump_round.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/athletics/03_jump_forward.mp4"></video><div class="body"><div class="topline"><h3>3. Jump Forward</h3><span class="status pending">Loading</span></div><code>Agentech.jump_forward()</code><p class="desc">Forward-propulsive jump and landing stabilization.</p><div class="file"><a href="videos/athletics/03_jump_forward.mp4">03_jump_forward.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/athletics/04_frontflip.mp4"></video><div class="body"><div class="topline"><h3>4. Frontflip</h3><span class="status pending">Loading</span></div><code>Agentech.frontflip()</code><p class="desc">Forward rotation, landing, and height restoration.</p><div class="file"><a href="videos/athletics/04_frontflip.mp4">04_frontflip.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/athletics/05_sideflip_left.mp4"></video><div class="body"><div class="topline"><h3>5. Sideflip Left</h3><span class="status pending">Loading</span></div><code>Agentech.sideflip(direction="left")</code><p class="desc">Left lateral rotation and landing recovery.</p><div class="file"><a href="videos/athletics/05_sideflip_left.mp4">05_sideflip_left.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/athletics/06_sideflip_right.mp4"></video><div class="body"><div class="topline"><h3>6. Sideflip Right</h3><span class="status pending">Loading</span></div><code>Agentech.sideflip(direction="right")</code><p class="desc">Right lateral rotation and landing recovery.</p><div class="file"><a href="videos/athletics/06_sideflip_right.mp4">06_sideflip_right.mp4</a></div></div></article>
+        <article><video controls playsinline preload="metadata" src="videos/athletics/07_kick.mp4"></video><div class="body"><div class="topline"><h3>7. Kick</h3><span class="status pending">Loading</span></div><code>Agentech.kick()</code><p class="desc">Installed one-leg kicking action and return to standing.</p><div class="file"><a href="videos/athletics/07_kick.mp4">07_kick.mp4</a></div></div></article>
+      </div>
+    </section>
+  </main>
+  <footer>Video integrity manifests: <code style="display:inline-block;margin:0">videos/*/SHA256SUMS.txt</code></footer>
+  <script>
+    document.querySelectorAll('article').forEach((card) => {
+      const video = card.querySelector('video');
+      const badge = card.querySelector('.status');
+      video.addEventListener('loadedmetadata', () => { badge.textContent = `Ready · ${video.duration.toFixed(1)}s`; badge.classList.remove('pending'); });
+      video.addEventListener('error', () => { badge.textContent = 'Video failed'; badge.style.background = '#ff6b78'; badge.classList.remove('pending'); });
+    });
+  </script>
+</body>
+</html>

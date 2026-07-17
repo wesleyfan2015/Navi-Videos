@@ -1,0 +1,18 @@
+# Navi Movement Videos for Realistic MuJoCo Simulation
+
+This repository is a coworker-facing motion reference for reproducing Navi as realistically as possible in MuJoCo.
+
+Open **[the playable video document](index.html)** to view all 38 actual MP4 videos with their corresponding Agentech SDK commands.
+
+## Contents
+
+- `videos/movements/`: 5 translational movement videos
+- `videos/actions/`: 26 Action Command videos
+- `videos/athletics/`: 7 Athletic Command videos
+- `videos/*/SHA256SUMS.txt`: SHA-256 integrity manifests
+
+All videos are browser-compatible H.264 MP4 files at 1600×1200, 30 fps, `yuv420p`, with fast-start metadata. Each file was fully decoded without errors, visually checked for robot motion, copied to Windows, and hash-matched against the Mac output.
+
+## Recommended MuJoCo use
+
+Use the videos to estimate phase timing, footfall order, base translation, body-height changes, roll/pitch/yaw excursions, landing compliance, recovery timing, and expressive pose targets. The numbering preserves the physical execution order inside each group.
