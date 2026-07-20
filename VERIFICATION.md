@@ -1,6 +1,8 @@
 # Video verification
 
-- Total MP4 videos: **140**
+- GitHub Pages library MP4 videos: **140**
+- Repository-only multi-robot MP4 videos: **1**
+- Total repository MP4 videos: **141**
 - Movement Commands: **5**
 - Action Commands: **128**
 - Athletic Commands: **7**
@@ -13,6 +15,7 @@
 - Delivery page: every item is embedded as a real HTML5 `<video controls>` player with viewport-based metadata loading
 - Hosted playback: all 140 player sources load valid duration metadata when activated, with zero media errors
 - Hosted integrity: all 140 GitHub Pages MP4 URLs return video content and match their verified local SHA-256 hashes
+- Repository-only multi-robot integrity: the supplemental two-dog video fully decodes without errors and matches its SHA-256 manifest; it is intentionally absent from `index.html`
 - Public playback: [GitHub Pages video library](https://wesleyfan2015.github.io/Navi-Videos/)
 
 The contact sheets and low-resolution proxies used only for internal quality assurance are intentionally excluded. This repository contains videos, documentation, and integrity manifests only.

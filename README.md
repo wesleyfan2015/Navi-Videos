@@ -13,9 +13,14 @@ GitHub's normal file view may say that an MP4 is too large to preview. Use the p
 - `videos/movements/`: 5 translational movement videos
 - `videos/actions/`: 128 Action Command videos
 - `videos/athletics/`: 7 Athletic Command videos
+- `videos/multi_robot/`: 1 supplemental multi-robot reference video, stored in the repository only and intentionally excluded from the website
 - `videos/*/SHA256SUMS.txt`: SHA-256 integrity manifests
 
 All videos are browser-compatible H.264 MP4 files at 1600×1200, 30 fps, full-range 4:2:0 (`yuvj420p`), with fast-start metadata. Every file was fully decoded without errors, checked for visible robot motion, transferred with exact SHA-256 verification, and then verified from its hosted GitHub Pages URL.
+
+## Repository-only multi-robot reference
+
+- [`Two Dogs Peeing`](videos/multi_robot/01_two_dogs_peeing.mp4): both robots complete the peeing routine and recover to standing. The 13.17-second edit removes the long idle lead-in and trailing stand time. This supplemental MP4 is not included in `index.html` or the GitHub Pages library.
 
 ## New 97-motion recording order
 
